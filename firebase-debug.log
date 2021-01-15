@@ -1,0 +1,50 @@
+[debug] [2021-01-15T05:42:35.783Z] ----------------------------------------------------------------------
+[debug] [2021-01-15T05:42:35.784Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\zackg\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init functions
+[debug] [2021-01-15T05:42:35.785Z] CLI Version:   8.13.1
+[debug] [2021-01-15T05:42:35.785Z] Platform:      win32
+[debug] [2021-01-15T05:42:35.785Z] Node Version:  v14.5.0
+[debug] [2021-01-15T05:42:35.786Z] Time:          Thu Jan 14 2021 21:42:35 GMT-0800 (Pacific Standard Time)
+[debug] [2021-01-15T05:42:35.786Z] ----------------------------------------------------------------------
+[debug] [2021-01-15T05:42:35.786Z] 
+[debug] [2021-01-15T05:42:35.790Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-01-15T05:42:35.791Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\zackg\Documents\CICCCWebDev\superchat
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2021-01-15T05:42:46.593Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects  
+ {"projectId":"chat","name":"superchat"}
+[debug] [2021-01-15T05:42:46.681Z] <<< HTTP RESPONSE 400 {"vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Fri, 15 Jan 2021 05:42:44 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=35","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-01-15T05:42:46.681Z] <<< HTTP RESPONSE BODY {"error":{"code":400,"message":"field [project_id] has issue [project_id must be at least 6 characters long]","status":"INVALID_ARGUMENT","details":[{"@type":"type.googleapis.com/google.rpc.BadRequest","fieldViolations":[{"field":"project_id","description":"project_id must be at least 6 characters long"}]},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"url":"https://cloud.google.com/resource-manager/reference/rest/v1/projects"}]}]}}
+[debug] [2021-01-15T05:42:46.684Z] FirebaseError: HTTP Error: 400, field [project_id] has issue [project_id must be at least 6 characters long]
+    at module.exports (C:\Users\zackg\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:38:12)
+    at Request._callback (C:\Users\zackg\AppData\Roaming\npm\node_modules\firebase-tools\lib\api.js:41:35)
+    at Request.self.callback (C:\Users\zackg\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:314:20)
+    at Request.EventEmitter.emit (domain.js:486:12)
+    at Request.<anonymous> (C:\Users\zackg\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1154:10)
+    at Request.emit (events.js:314:20)
+    at Request.EventEmitter.emit (domain.js:486:12)
+    at IncomingMessage.<anonymous> (C:\Users\zackg\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:1076:12)
+    at Object.onceWrapper (events.js:420:28)
+    at IncomingMessage.emit (events.js:326:22)
+    at IncomingMessage.EventEmitter.emit (domain.js:486:12)
+    at endReadableNT (_stream_readable.js:1226:12)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21)
+[error] 
+[error] Error: Failed to create project. See firebase-debug.log for more info.
